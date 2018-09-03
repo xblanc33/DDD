@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+group = 'fr.ubordeaux.ao'
+version = '1.0-SNAPSHOT'
+
+description = """DDD Test with eCommerce Application"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+  compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+  testCompile 'junit:junit:4.12'
+}
+
+apply plugin: 'application'
+mainClassName = "fr.ubordeaux.ao.referencemanagement.ui.SocketServerMain"
+
+run {
+   standardInput = System.in
+}

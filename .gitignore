@@ -4,6 +4,7 @@
 bin/
 build/
 gradle/
+target/
 .classpath
 .project
 gradlew
