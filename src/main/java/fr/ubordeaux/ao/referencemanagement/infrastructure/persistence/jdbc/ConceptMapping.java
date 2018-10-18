@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import fr.ubordeaux.ao.referencemanagement.domain.exception.ReferenceManagementException;
 
-public abstract class ConceptMapping {
+public class ConceptMapping {
     private Connection connection;
     private final String DATA_BASE = "PRODUCTS";
     private final String USER = "root";
@@ -18,7 +18,6 @@ public abstract class ConceptMapping {
         } catch (Exception ex) {
             throw new ReferenceManagementException("Unable to connect DataBase");
         }
-        
     }
 
     private void connectToDataBase() throws ClassNotFoundException, SQLException {

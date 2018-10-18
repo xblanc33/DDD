@@ -8,12 +8,12 @@ import fr.ubordeaux.ao.referencemanagement.domain.type.CatalogName;
  * Repository 
  * 
  */
-public interface Catalog {
-    public CatalogName getName();
-    public Set<Catalog> getSubCatalogs();
-    public Catalog getSubCatalogByName(CatalogName catalogName);
-    public Catalog createSubCatalog(CatalogName subCatalogName);
-    public int size();
-    public Set<Reference> getReferences();
-    public void add(Reference reference);
+public abstract class Catalog {
+    public abstract CatalogName getName();
+    public abstract Set<Catalog> getSubCatalogs();
+    public abstract Catalog getSubCatalogByName(CatalogName catalogName);
+    public abstract Catalog createSubCatalog(CatalogName subCatalogName);
+    public abstract int size();
+    public abstract Set<Reference> getReferences();
+    public abstract void add(Reference reference);
 }

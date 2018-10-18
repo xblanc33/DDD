@@ -14,16 +14,16 @@ public class HandlerImpl implements Handler {
 
 	public HandlerImpl(Catalog rootCatalog, KeyWordMap keywordMap) {
 	    this.setRootCatalog(rootCatalog);
-	    this.setKeyWordMap(keywordMap);
+		this.setKeyWordMap(keywordMap);
 	}
 
 	private void setRootCatalog(Catalog rootCatalog) {
-	    if (rootCatalog == null) throw new ReferenceManagementException("cannot create SearchEngine with null as root catalog");
+	    if (rootCatalog == null) throw new ReferenceManagementException("cannot create HandlerImpl with null as root catalog");
 	    this.rootCatalog = rootCatalog;
 	}
 	
 	private void setKeyWordMap(KeyWordMap keywordMap) {
-	    if (keywordMap == null) throw new ReferenceManagementException("cannot create SearchEngine with null as a KeyWordMap");
+	    if (keywordMap == null) throw new ReferenceManagementException("cannot create HandlerImpl with null as a KeyWordMap");
 	    this.keywordMap = keywordMap;
 	}
     

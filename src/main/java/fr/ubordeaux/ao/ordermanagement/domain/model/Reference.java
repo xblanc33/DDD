@@ -1,4 +1,4 @@
-package fr.ubordeaux.ao.referencemanagement.domain.model;
+package fr.ubordeaux.ao.ordermanagement.domain.model;
 
 import java.util.Objects;
 
@@ -13,14 +13,12 @@ import fr.ubordeaux.ao.referencemanagement.domain.type.Price;
 public class Reference {
     private String id;
     private String name;
-    private String description;
-    private Price basePrice;
+    private Price price;
 
-    public Reference(String id, String name, String description, Price basePrice) {
+    public Reference(String id, String name, Price price) {
         this.setId(id);
         this.setName(name);
-        this.setDescription(description);
-        this.setBasePrice(basePrice);
+        this.setPrice(price);
     }
 
     public String getId() {
@@ -31,12 +29,8 @@ public class Reference {
         return this.name;
     }
 
-    public String getDescription() {
-        return this.description;
-    }
-
-    public Price getBasePrice() {
-        return this.basePrice;
+    public Price getPrice() {
+        return this.price;
     }
 
     private void setId(String id) {
@@ -49,26 +43,18 @@ public class Reference {
         this.name = name;
     }
 
-    private void setDescription(String description) {
-        if (description == null) throw new ReferenceManagementException("cannot create reference with null description");
-        this.description = description;
+    private void setPrice(Price price) {
+        if (price == null) throw new ReferenceManagementException("cannot create reference with null price");
+        this.price = price;
     }
-
-    private void setBasePrice(Price basePrice) {
-        if (basePrice == null) throw new ReferenceManagementException("cannot create reference with null basePrice");
-        this.basePrice = basePrice;
-    }
-
-    
 
     @Override
     public boolean equals(Object other) {
         if (other instanceof Reference) {
             Reference otherReference = (Reference)other;
             boolean sameName = this.getName().compareTo(otherReference.getName())==0;
-            boolean sameDescription = this.getDescription().compareTo(otherReference.getDescription())==0;
-            boolean sameBasePrice = this.getBasePrice().equals(otherReference.getBasePrice());
-			return sameName && sameDescription && sameBasePrice;
+            boolean samePrice = this.getPrice().equals(otherReference.getPrice());
+			return sameName && samePrice;
         } else {
             return false;
         }
@@ -81,6 +67,6 @@ public class Reference {
 
     @Override
     public String toString() {
-        return "Reference id="+id+"name="+name+" description="+description;
+        return "Reference id="+id+"name="+name;
     }
 }

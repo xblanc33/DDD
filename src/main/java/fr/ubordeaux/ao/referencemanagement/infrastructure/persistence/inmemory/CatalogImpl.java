@@ -12,7 +12,7 @@ import fr.ubordeaux.ao.referencemanagement.domain.type.CatalogName;
 
 
 
-public class CatalogImpl implements Catalog {
+public class CatalogImpl extends Catalog {
     private CatalogName name;
     private Set<Reference> store;
     private Map<CatalogName, Catalog> subCatalogs;    

@@ -12,15 +12,11 @@ public class Basket {
         lines = new HashSet<OrderLine>();
     }
 
-    private void setId(String id) {
-        this.id = id;
-    }
-
-    public void addOrderLine(OrderLine line) {
+    public void add(OrderLine line) {
         lines.add(line);
     }
 
-    public void removeLine(OrderLine line) {
+    public void remove(OrderLine line) {
         lines.remove(line);
     }
 
@@ -31,5 +27,8 @@ public class Basket {
         }
         return amount;
     }
-
+    
+    private void setId(String id) {
+        this.id = id;
+    }
 }

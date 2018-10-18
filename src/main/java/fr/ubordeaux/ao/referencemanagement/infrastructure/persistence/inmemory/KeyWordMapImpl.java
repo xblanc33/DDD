@@ -10,7 +10,7 @@ import fr.ubordeaux.ao.referencemanagement.domain.model.KeyWord;
 import fr.ubordeaux.ao.referencemanagement.domain.model.Reference;
 
 
-public class KeyWordMapImpl implements KeyWordMap {
+public class KeyWordMapImpl extends KeyWordMap {
     Map<KeyWord, Set<Reference>> map;
 
     public KeyWordMapImpl() {
@@ -48,7 +48,7 @@ public class KeyWordMapImpl implements KeyWordMap {
 	}
 
 	@Override
-	public Set<KeyWord> getKeyWords() {
+	public Set<KeyWord> getKeyWordSet() {
         Set<KeyWord> result = new HashSet<KeyWord>();
         result.addAll(map.keySet());
 		return result;
