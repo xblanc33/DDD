@@ -4,9 +4,9 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-import fr.ubordeaux.ao.referencemanagement.application.command.Command;
-import fr.ubordeaux.ao.referencemanagement.application.command.Gateway;
-import fr.ubordeaux.ao.referencemanagement.application.command.Handler;
+import fr.ubordeaux.ao.referencemanagement.application.Command;
+import fr.ubordeaux.ao.referencemanagement.application.Gateway;
+import fr.ubordeaux.ao.referencemanagement.application.Handler;
 import fr.ubordeaux.ao.referencemanagement.domain.exception.ReferenceManagementException;
 
 public class GatewayImpl implements Gateway {

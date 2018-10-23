@@ -1,7 +1,7 @@
 package fr.ubordeaux.ao.referencemanagement.infrastructure.command;
 
-import fr.ubordeaux.ao.referencemanagement.application.command.Command;
-import fr.ubordeaux.ao.referencemanagement.application.command.Handler;
+import fr.ubordeaux.ao.referencemanagement.application.Command;
+import fr.ubordeaux.ao.referencemanagement.application.Handler;
 import fr.ubordeaux.ao.referencemanagement.domain.exception.ReferenceManagementException;
 import fr.ubordeaux.ao.referencemanagement.domain.model.Catalog;
 import fr.ubordeaux.ao.referencemanagement.domain.model.KeyWordMap;

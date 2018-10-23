@@ -1,18 +1,19 @@
 package fr.ubordeaux.ao.ordermanagement.application;
 
-import java.util.UUID;
-
-import fr.ubordeaux.ao.ordermanagement.domain.model.Basket;
+import fr.ubordeaux.ao.ordermanagement.domain.model.BasketCreated;
+import fr.ubordeaux.ao.ordermanagement.domain.model.EventStore;
 
 public class CreateBasket implements Command {
+    private String basketId;
 
-    public CreateBasket() {
-
+    public CreateBasket(String basketId) {
+        this.basketId = basketId;
     }
 
 	@Override
-	public void execute() {
-        Basket basket = new Basket(UUID.randomUUID().toString());		
+	public void execute(EventStore eventStore) {
+        eventStore.add(new BasketCreated(basketId));
+        
 	}
 
 }

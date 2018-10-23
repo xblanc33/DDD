@@ -11,5 +11,6 @@ import fr.ubordeaux.ao.ordermanagement.domain.model.Event;
 public abstract class EventStore {
     public abstract void add(Event event);
     public abstract List<Event> getEventList();
-    public abstract List<Event> getEventListByReference(Reference reference);
+    public abstract List<Event> getEventListByBasketId(String basketId);
+    public abstract List<Event> getEventListByReferenceId(String referenceId);
 }

@@ -1,4 +1,4 @@
-package fr.ubordeaux.ao.referencemanagement.application.command;
+package fr.ubordeaux.ao.referencemanagement.application;
 
 import fr.ubordeaux.ao.referencemanagement.domain.model.Catalog;
 import fr.ubordeaux.ao.referencemanagement.domain.model.KeyWordMap;

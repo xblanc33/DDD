@@ -8,9 +8,9 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.Set;
 
-import fr.ubordeaux.ao.referencemanagement.application.command.AddReferenceToCatalog;
-import fr.ubordeaux.ao.referencemanagement.application.command.Gateway;
-import fr.ubordeaux.ao.referencemanagement.application.command.MapKeyWord;
+import fr.ubordeaux.ao.referencemanagement.application.AddReferenceToCatalog;
+import fr.ubordeaux.ao.referencemanagement.application.Gateway;
+import fr.ubordeaux.ao.referencemanagement.application.MapKeyWord;
 import fr.ubordeaux.ao.referencemanagement.domain.model.Catalog;
 import fr.ubordeaux.ao.referencemanagement.domain.model.KeyWord;
 import fr.ubordeaux.ao.referencemanagement.domain.model.KeyWordMap;
