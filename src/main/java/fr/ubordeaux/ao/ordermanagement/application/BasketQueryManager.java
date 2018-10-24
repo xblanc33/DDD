@@ -13,10 +13,11 @@ public class BasketQueryManager {
     }
 
     public Basket buildBasketFromId(String basketId) {
+        Basket basket = new Basket(basketId);
         for (Event ev : eventStore.getEventListByBasketId(basketId)) {
-            //TODO
+            ev.build(basket);
         }
-        return null;
+        return basket;
     }
 
     private void setEventStore(EventStore eventStore) {
