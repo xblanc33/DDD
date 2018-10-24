@@ -17,6 +17,11 @@ public class ReferenceRemovedFromBasket extends Event {
         this.setQuantity(quantity);
     }
 
+    public void build(Basket basket) {
+        Reference reference = null; //TODO
+        basket.increase(reference, quantity);
+    }
+
     public String getBasketId() {
         return basketId;
     }
